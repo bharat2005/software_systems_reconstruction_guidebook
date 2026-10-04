@@ -1,3 +1,9 @@
+Absolutely. Since you want something **storable and reusable as a guidebook**, here is a clean Markdown version you can save as:
+
+`production-app-reverse-engineering-playbook.md`
+
+I’ve kept it practical rather than theoretical, so you can use the same file for **Asuken and every future reference app**.
+
 # Production App Reverse-Engineering Playbook
 
 > A repeatable workflow for rebuilding a production-grade application from a real production app as reference.
@@ -1484,3 +1490,21 @@ PHASE 12 — FINISH
 # ONE SENTENCE TO REMEMBER
 
 > **Observe the behavior → understand the system → design ownership and boundaries → build one complete flow → validate → expand → harden.**
+
+### For your Asuken project specifically
+
+Your **next action is only Phase 1**.
+
+Don't create the architecture yet. Don't create `AuthModule`, `DietModule`, `SocialModule`, etc. yet.
+
+Create these three files first:
+
+```text
+asuken/
+├── 01-observation.md
+├── unknowns.md
+└── 02-system-map.md   # leave mostly empty for now
+```
+
+Then spend your first pass **only observing Asuken**. Once observation is reasonably complete, you move to the system map. This prevents you from falling back into your old “identify modules → immediately code them” cycle.
+
